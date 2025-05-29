@@ -1,8 +1,8 @@
-📘 University Enrollment Software
+### 📘 University Enrollment Software
 A JavaFX desktop application backed by a MySQL database.
 Easily manage university data: departments, professors, courses, students, and enrollments.
 
-🚀 Features
+### 🚀 Features
 JavaFX GUI with TableView for clean visual management
 
 MySQL database integration using JDBC
@@ -17,7 +17,7 @@ Input validation and error handling
 
 Modern, clean CSS styling
 
-🛠️ Requirements
+### 🛠️ Requirements
 Java 17+
 
 JavaFX SDK
@@ -28,7 +28,7 @@ JDBC Driver
 
 (Optional) Eclipse or IntelliJ
 
-📂 Folder Structure
+### 📂 Folder Structure
 
 ```bash
 university-enrollment-software/

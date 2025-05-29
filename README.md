@@ -3,30 +3,30 @@ A JavaFX desktop application backed by a MySQL database.
 Easily manage university data: departments, professors, courses, students, and enrollments.
 
 ### 🚀 Features
--JavaFX GUI with TableView for clean visual management
+- JavaFX GUI with TableView for clean visual management
 
--MySQL database integration using JDBC
+- MySQL database integration using JDBC
 
--Stored procedures (e.g., add_department)
+- Stored procedures (e.g., add_department)
 
--Modular architecture with MVC-style organization
+- Modular architecture with MVC-style organization
 
--Sample generic LinkedList implementation included
+- Sample generic LinkedList implementation included
 
--Input validation and error handling
+- Input validation and error handling
 
--Modern, clean CSS styling
+- Modern, clean CSS styling
 
 ### 🛠️ Requirements
--Java 17+
+- Java 17+
 
--JavaFX SDK
+- JavaFX SDK
 
--MySQL
+- MySQL
 
--J-DBC Driver
+- J-DBC Driver
 
--(Optional) Eclipse or IntelliJ
+- (Optional) Eclipse or IntelliJ
 
 ### 📂 Folder Structure
 
@@ -62,11 +62,11 @@ jdbc:mysql://localhost:3306/universityenrollmentsoftware?user=root&password=your
 ```
 **3.Run the program:**
 
--Open in your preferred IDE
+- Open in your preferred IDE
 
--Run Main.java from the src/ directory
+- Run Main.java from the src/ directory
 
--Use the GUI to view, add, and manage university records
+- Use the GUI to view, add, and manage university records
 
 **📄 SQL Script**
 All table creation statements and stored procedures are in:

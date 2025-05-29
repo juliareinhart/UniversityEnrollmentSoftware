@@ -14,7 +14,7 @@ Easily manage university data: departments, professors, courses, students, and e
 
 - Modular architecture with MVC-style organization
 
-- Sample generic LinkedList implementation included
+- Sample generic LinkedList implementation included to replace the ArrayList features of update, edit, delete, add, etc.
 
 - Input validation and error handling
 

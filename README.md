@@ -2,6 +2,9 @@
 A JavaFX desktop application backed by a MySQL database.
 Easily manage university data: departments, professors, courses, students, and enrollments.
 
+### 📘 Demo Video
+🎥 [Watch the demo on YouTube](https://youtu.be/3Voq4RADpvU)
+
 ### 🚀 Features
 - JavaFX GUI with TableView for clean visual management
 
@@ -82,11 +85,12 @@ This project includes a custom implementation of a generic LinkedList class, use
 LinkedList.java
 ```
 
-🙋 About Me
-👩‍💻 Built with 💖 by Julia Reinhart —
-Math graduate, self-taught MERN + Java developer, and passionate about beautiful accessible software.
+## 🙋 About Me
 
-🔗 Connect on LinkedIn
+👩‍💻 Built with 💖 by **Julia Reinhart** –  
+Math graduate, self-taught MERN developer, JavaFX + MySQL, and passionate about creating accessible tools that are smart and beautiful.
+
+🔗 [Connect on LinkedIn](https://www.linkedin.com/in/julia-reinhart-798aa6258/)
 
 📄 License
 This project is licensed under the MIT License.

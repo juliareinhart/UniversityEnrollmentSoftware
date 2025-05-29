@@ -3,30 +3,30 @@ A JavaFX desktop application backed by a MySQL database.
 Easily manage university data: departments, professors, courses, students, and enrollments.
 
 ### 🚀 Features
-JavaFX GUI with TableView for clean visual management
+-JavaFX GUI with TableView for clean visual management
 
-MySQL database integration using JDBC
+-MySQL database integration using JDBC
 
-Stored procedures (e.g., add_department)
+-Stored procedures (e.g., add_department)
 
-Modular architecture with MVC-style organization
+-Modular architecture with MVC-style organization
 
-Sample generic LinkedList implementation included
+-Sample generic LinkedList implementation included
 
-Input validation and error handling
+-Input validation and error handling
 
-Modern, clean CSS styling
+-Modern, clean CSS styling
 
 ### 🛠️ Requirements
-Java 17+
+-Java 17+
 
-JavaFX SDK
+-JavaFX SDK
 
-MySQL
+-MySQL
 
-JDBC Driver
+J-DBC Driver
 
-(Optional) Eclipse or IntelliJ
+-(Optional) Eclipse or IntelliJ
 
 ### 📂 Folder Structure
 

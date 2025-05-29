@@ -24,7 +24,7 @@ Easily manage university data: departments, professors, courses, students, and e
 
 -MySQL
 
-J-DBC Driver
+-J-DBC Driver
 
 -(Optional) Eclipse or IntelliJ
 

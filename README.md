@@ -1,0 +1,84 @@
+📘 University Enrollment Software
+A JavaFX desktop application backed by a MySQL database.
+Easily manage university data: departments, professors, courses, students, and enrollments.
+
+🚀 Features
+JavaFX GUI with TableView for clean visual management
+
+MySQL database integration using JDBC
+
+Stored procedures (e.g., add_department)
+
+Modular architecture with MVC-style organization
+
+Sample generic LinkedList implementation included
+
+Input validation and error handling
+
+Modern, clean CSS styling
+
+🛠️ Requirements
+Java 17+
+
+JavaFX SDK
+
+MySQL
+
+JDBC Driver
+
+(Optional) Eclipse or IntelliJ
+
+📂 Folder Structure
+css
+Copy
+Edit
+university-enrollment-software/
+├── src/
+│   ├── controller/
+│   ├── model/
+│   ├── view/
+│   ├── utils/
+│   └── Main.java
+├── LinkedList.java
+├── university_schema.sql
+├── README.md
+🧪 How to Run
+Set up your MySQL database:
+
+Run the university_schema.sql file in MySQL Workbench or another MySQL client.
+
+This will create all 5 tables and stored procedures.
+
+Configure database connection:
+
+Edit the connection string in your Java class or app.config (depending on how you store credentials).
+
+Example JDBC string:
+jdbc:mysql://localhost:3306/universityenrollmentsoftware?user=root&password=yourpassword
+
+Run the program:
+
+Open in your preferred IDE
+
+Run Main.java from the src/ directory
+
+Use the GUI to view, add, and manage university records
+
+📄 SQL Script
+All table creation statements and stored procedures are in:
+university_schema.sql
+
+🔗 Generic Linked List
+This project includes a custom implementation of a generic LinkedList class, used for earlier data management before full DB integration:
+LinkedList.java
+
+🙋 About Me
+👩‍💻 Built with 💖 by Julia Reinhart —
+Math graduate, self-taught MERN + Java developer, and passionate about beautiful accessible software.
+
+🔗 Connect on LinkedIn
+
+📄 License
+This project is licensed under the MIT License.
+See the LICENSE file for more info.
+

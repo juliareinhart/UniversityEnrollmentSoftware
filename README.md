@@ -31,19 +31,19 @@ JDBC Driver
 📂 Folder Structure
 
 ```bash
-css
-Copy
-Edit
 university-enrollment-software/
 ├── src/
-│   ├── controller/
-│   ├── model/
-│   ├── view/
-│   ├── utils/
-│   └── Main.java
-├── LinkedList.java
-├── university_schema.sql
-├── README.md
+│   └── application/
+│       ├── university-enrollment-software.java         # Main application file
+│       ├── LinkedList.java                             # Custom generic linked list
+│       └── application.css                             # CSS styling
+├── app.config                                          # Database connection string config
+├── build.fxbuild                                       # JavaFX build configuration
+├── gson_lib/                                           # Gson library for JSON parsing
+├── JRE System Library/                                 # Java runtime environment (JavaSE-21)
+├── JavaFX/                                             # JavaFX SDK libraries
+├── university_schema.sql                               # SQL script
+└── README.md                                           # Project documentation
 ```
 
 🧪 How to Run

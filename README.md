@@ -46,27 +46,19 @@ university-enrollment-software/
 └── README.md                                           # Project documentation
 ```
 
-🧪 How to Run
-Set up your MySQL database:
+### 🧪 How to Run
 
-Run the university_schema.sql file in MySQL Workbench or another MySQL client.
+**1. Set up your MySQL database:**
 
-This will create all 5 tables and stored procedures.
+- Run the `university_schema.sql` file in MySQL Workbench or another MySQL client.
+- This will create all 5 tables and the stored procedures.
 
-Configure database connection:
+**2. Configure database connection:**
 
-Edit the connection string in your Java class or app.config (depending on how you store credentials).
+- Edit the connection string in your Java class or `app.config`.
 
-Example JDBC string:
+```plaintext
 jdbc:mysql://localhost:3306/universityenrollmentsoftware?user=root&password=yourpassword
-
-Run the program:
-
-Open in your preferred IDE
-
-Run Main.java from the src/ directory
-
-Use the GUI to view, add, and manage university records
 
 📄 SQL Script
 All table creation statements and stored procedures are in:

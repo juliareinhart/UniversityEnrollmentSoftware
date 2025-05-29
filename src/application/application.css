@@ -1,0 +1,80 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+/* .menu {
+	fx-hover: purple;
+}
+
+.required:hover::after*/
+
+.menu:hover, .menu-item:hover  {
+    -fx-background-color: #fa08b9;
+}
+
+.root {
+	-fx-background-color: #ffe4f8;
+}
+
+.menu-bar {
+	/*-fx-background-color: #c3f3ff;*/
+	-fx-background-color: #ffc3ef;
+}
+
+.button, .choice-box {
+	-fx-background-color: #c3f3ff;
+}
+
+.button:hover, .choice-box:hover{
+    -fx-background-color: #fa08b9;
+    -fx-text-fill: white;
+}
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+.table-row-cell:hover {
+    -fx-background-color: #93f9b911;
+    -fx-text-background-color: #fa08b9;
+}
+.table-row-cell:odd{
+    -fx-background-color: #93f9b911;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell:even{
+    -fx-background-color: #1dbbdd11;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-view .column-header-background {
+	/*-fx-color: #1dbbdd11;*/
+	-fx-color: #c3f3ff;
+}
+
+.myDialog{
+    -fx-background-color: #ffe4f8;
+}
+
+.myDialog .button:hover{
+    -fx-background-color: #fa08b9;
+    -fx-text-fill: white;
+}
+
+.cursive-large-italic {
+	/*-fx-font-family: cursive;*/
+	-fx-font-size: 25px;
+	-fx-font-weight: bold;
+	-fx-text-fill: #bc008a;
+	
+}
+
+/*css to copy bootstrap's red badge, sadly i can't add classes to a tooltip */
+.badge {
+    -fx-background-color: #dc3545; /* Bootstrap's red  :D */
+    -fx-text-fill: white;
+    -fx-padding: 4 8;
+    -fx-background-radius: 8;
+    /*-fx-font-size: 10px;*/
+    /*-fx-font-weight: bold;*/
+}

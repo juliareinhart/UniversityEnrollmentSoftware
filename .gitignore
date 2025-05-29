@@ -1,0 +1,13 @@
+# Ignore sensitive config file
+app.config
+
+# Java/Eclipse defaults
+*.class
+*.log
+*.tmp
+*.bak
+bin/
+target/
+.settings/
+.classpath
+.project

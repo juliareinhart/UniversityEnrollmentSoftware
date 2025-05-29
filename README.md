@@ -29,6 +29,8 @@ JDBC Driver
 (Optional) Eclipse or IntelliJ
 
 📂 Folder Structure
+
+```bash
 css
 Copy
 Edit
@@ -42,6 +44,8 @@ university-enrollment-software/
 ├── LinkedList.java
 ├── university_schema.sql
 ├── README.md
+```
+
 🧪 How to Run
 Set up your MySQL database:
 

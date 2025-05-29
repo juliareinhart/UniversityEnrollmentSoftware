@@ -60,12 +60,19 @@ university-enrollment-software/
 ```plaintext
 jdbc:mysql://localhost:3306/universityenrollmentsoftware?user=root&password=yourpassword
 ```
+**3.Run the program:**
 
-📄 SQL Script
+-Open in your preferred IDE
+
+-Run Main.java from the src/ directory
+
+-Use the GUI to view, add, and manage university records
+
+**📄 SQL Script**
 All table creation statements and stored procedures are in:
 university_schema.sql
 
-🔗 Generic Linked List
+**🔗 Generic Linked List**
 This project includes a custom implementation of a generic LinkedList class, used for earlier data management before full DB integration:
 LinkedList.java
 

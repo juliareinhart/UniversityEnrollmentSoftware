@@ -70,11 +70,17 @@ jdbc:mysql://localhost:3306/universityenrollmentsoftware?user=root&password=your
 
 **📄 SQL Script**
 All table creation statements and stored procedures are in:
+
+```plaintext
 university_schema.sql
+```
 
 **🔗 Generic Linked List**
 This project includes a custom implementation of a generic LinkedList class, used for earlier data management before full DB integration:
+
+```plaintext
 LinkedList.java
+```
 
 🙋 About Me
 👩‍💻 Built with 💖 by Julia Reinhart —

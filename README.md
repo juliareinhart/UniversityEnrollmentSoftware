@@ -59,6 +59,7 @@ university-enrollment-software/
 
 ```plaintext
 jdbc:mysql://localhost:3306/universityenrollmentsoftware?user=root&password=yourpassword
+```
 
 📄 SQL Script
 All table creation statements and stored procedures are in:

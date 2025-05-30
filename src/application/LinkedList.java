@@ -1,6 +1,8 @@
-import application.MyGenericList.Node;
+package application;
 
-class MyGenericList <T extends Comparable<T> >//generic linked list class, can be used like an arrayList class, but, only with objects that implement the comparable interface, with a compareTo method
+//import MyGenericList.Node;
+
+class LinkedList <T extends Comparable<T> >//generic linked list class, can be used like an arrayList class, but, only with objects that implement the comparable interface, with a compareTo method
 
 {
     private  class Node<T>

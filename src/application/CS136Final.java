@@ -1,12 +1,11 @@
 //necessary imports for the code to run and to use JavaFX additional features
 
 package application;
-//import MyGenericList.Node;
 
 //import ArrayList.Node;
 
 import java.io.*; // needed to write to files and to throw exceptions when reading  a file, necessary for files
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -47,7 +46,8 @@ import com.google.gson.annotations.SerializedName;
 
 import java.sql.*;
 // needed for scanner objects such as file reading and reading input from the keyboard
-import java.util.*;
+//import java.util.*;
+import java.util.Properties;
 
 
 //to be honest, i'm not quite sure what these classes do, but I know they are necessary for the table view to work properly. I believe these are used for binding/attaching the object parameters to the tableview data in that will be displayed there. I haven't learned call backs but I will and I was following an easier tutorial that didn't work for me, so I did it the old and longer way which is this way
@@ -729,8 +729,8 @@ class DatabaseManager { //instead of separate classes for each file manager tabl
 	       
 	}
 	
-	public ArrayList<String> getAllDepartmentNames() throws SQLException {
-		ArrayList<String> departmentNames = new ArrayList<>(); //using an arraylist for greater retrieval from the GUI, easy way to use data
+	public LinkedList<String> getAllDepartmentNames() throws SQLException {
+		LinkedList<String> departmentNames = new LinkedList<>(); //using an arraylist for greater retrieval from the GUI, easy way to use data
 	    String SqlStatement = "SELECT deptname FROM department"; //select all rows from the department table but only the department name column and load it into an array list
 	    //okay to use statement not prepared statement bc there is no user input in SQL query
 	    try (Connection conn = ConnectToDatabase.getConnection(); //using connect to database class for simplicity, make the connection to connect to the database
@@ -969,8 +969,8 @@ class DatabaseManager { //instead of separate classes for each file manager tabl
 		       
 		}
 		
-		public ArrayList<String> getInstructorNamesByDepartment(String departmentName) throws SQLException { //converted old function to use SQL
-			ArrayList<String> filteredInstructors = new ArrayList<>();
+		public LinkedList<String> getInstructorNamesByDepartment(String departmentName) throws SQLException { //converted old function to use SQL
+			LinkedList<String> filteredInstructors = new LinkedList<>();
 		    
 		    String SqlStatement =  //join between two tables, table name. field, from whatever two tables you are joining default is an inner join and that suffices here bc we need data to be present in BOTH tables not just one table
 		        "SELECT professor.professorname " + //each line of string in java needs quotes or won't compile syntax error without quotes and +
@@ -1001,8 +1001,8 @@ class DatabaseManager { //instead of separate classes for each file manager tabl
 		    return filteredInstructors;
 		}
 		
-		public ArrayList<String> getAllInstructorNames() throws SQLException {
-			ArrayList<String> instructorNames = new ArrayList<>(); //using an arraylist for greater retrieval from the GUI, easy way to use data
+		public LinkedList<String> getAllInstructorNames() throws SQLException {
+			LinkedList<String> instructorNames = new LinkedList<>(); //using an arraylist for greater retrieval from the GUI, easy way to use data
 		    String SqlStatement = "SELECT professorname FROM professor"; //select all rows from the department table but only the department name column and load it into an array list
 		    //okay to use statement not prepared statement bc there is no user input in SQL query
 		    try (Connection conn = ConnectToDatabase.getConnection(); //using connect to database class for simplicity, make the connection to connect to the database
@@ -1280,8 +1280,8 @@ class DatabaseManager { //instead of separate classes for each file manager tabl
 		       
 		}
 		
-		public ArrayList<Enrollment> getListOfEnrollmentsWithStudentId(int studentId) throws SQLException { //converted old function to use SQL
-			ArrayList<Enrollment> listOfEnrollmentsWithStudentId = new ArrayList<>();
+		public LinkedList<Enrollment> getListOfEnrollmentsWithStudentId(int studentId) throws SQLException { //converted old function to use SQL
+			LinkedList<Enrollment> listOfEnrollmentsWithStudentId = new LinkedList<>();
 		    
 		    String SqlStatement =  //join between two tables, table name. field, from whatever two tables you are joining default is an inner join and that suffices here bc we need data to be present in BOTH tables not just one table
 		        "SELECT * " + //each line of string in java needs quotes or won't compile syntax error without quotes and +
@@ -1320,8 +1320,8 @@ class DatabaseManager { //instead of separate classes for each file manager tabl
 		    return listOfEnrollmentsWithStudentId;
 		}
 		
-		public ArrayList<Enrollment> getListOfEnrollmentsWithCourseId(int courseId) throws SQLException { //converted old function to use SQL
-			ArrayList<Enrollment> listOfEnrollmentsWithCourseId = new ArrayList<>();
+		public LinkedList<Enrollment> getListOfEnrollmentsWithCourseId(int courseId) throws SQLException { //converted old function to use SQL
+			LinkedList<Enrollment> listOfEnrollmentsWithCourseId = new LinkedList<>();
 		    
 		    String SqlStatement =  //join between two tables, table name. field, from whatever two tables you are joining default is an inner join and that suffices here bc we need data to be present in BOTH tables not just one table
 		        "SELECT * " + //each line of string in java needs quotes or won't compile syntax error without quotes and +
@@ -1362,8 +1362,8 @@ class DatabaseManager { //instead of separate classes for each file manager tabl
 		
 		//int cid, String semester, int year
 		
-		public ArrayList<Enrollment> generateReport(int cid, String semester, int year) throws SQLException { //converted old function to use SQL
-			ArrayList<Enrollment> listOfEnrollmentsForReport = new ArrayList<>();
+		public LinkedList<Enrollment> generateReport(int cid, String semester, int year) throws SQLException { //converted old function to use SQL
+			LinkedList<Enrollment> listOfEnrollmentsForReport = new LinkedList<>();
 		    
 		    String SqlStatement =  //join between two tables, table name. field, from whatever two tables you are joining default is an inner join and that suffices here bc we need data to be present in BOTH tables not just one table
 		        "SELECT * " + //each line of string in java needs quotes or won't compile syntax error without quotes and +
@@ -3107,7 +3107,7 @@ public class CS136Final extends Application
 	    	  
 	    	// Add the department names to the dropdown, dynamically get them from the file and need to loop through them bc we are using a generic linked list
 	    	  
-	    	  ArrayList<String> departmentNames = null;
+	    	  LinkedList<String> departmentNames = null;
 	    	  try {
 	    		  departmentNames = databaseManager.getAllDepartmentNames();
 	    	  } catch (SQLException sqlException) {
@@ -3343,7 +3343,7 @@ public class CS136Final extends Application
 	    	  ChoiceBox<String> departmentChoiceBox = new ChoiceBox<>();
 	    	  // Add the department names to the dropdown, dynamically get them from the file and need to loop through them bc we are using a generic linked list
 	    	  
-	    	  ArrayList<String> departmentNames = null;
+	    	  LinkedList<String> departmentNames = null;
 	    	  try {
 	    		  departmentNames = databaseManager.getAllDepartmentNames();
 	    	  } catch (SQLException sqlException) {
@@ -4669,7 +4669,7 @@ public class CS136Final extends Application
 	    	  departmentChoiceBox = new ChoiceBox<>();
 	    	  // Add the department names to the dropdown, dynamically get them from the file and need to loop through them bc we are using a generic linked list
 	    	  
-	    	  ArrayList<String> departmentNames = null;
+	    	  LinkedList<String> departmentNames = null;
 	    	  try {
 	    		  departmentNames = databaseManager.getAllDepartmentNames();
 	    	  } catch (SQLException sqlException) {
@@ -4716,7 +4716,7 @@ public class CS136Final extends Application
 
 	    		    if (selectedDepartment != null) {
 	    		        
-	    		        ArrayList<String> filteredNames = null;
+	    		    	LinkedList<String> filteredNames = null;
 	    		    	  try {
 	    		    		  filteredNames = databaseManager.getInstructorNamesByDepartment(selectedDepartment);//get the filtered instructor names by department in my generic list
 	    		    	  } catch (SQLException sqlException) {
@@ -4775,7 +4775,7 @@ public class CS136Final extends Application
 	    	  instructorNameChoiceBox = new ChoiceBox<>();
 	    	  	    	  
 	    	  
-	    	  ArrayList<String> instructorNames = null;
+	    	  LinkedList<String> instructorNames = null;
 	    	  try {
 	    		  instructorNames = databaseManager.getAllInstructorNames();
 	    	  } catch (SQLException sqlException) {
@@ -5043,7 +5043,7 @@ public class CS136Final extends Application
 	    	  departmentChoiceBox = new ChoiceBox<>();
 	    	  // Add the department names to the dropdown, dynamically get them from the file and need to loop through them bc we are using a generic linked list
 	    	  
-	    	  ArrayList<String> departmentNames = null;
+	    	  LinkedList<String> departmentNames = null;
 	    	  try {
 	    		  departmentNames = databaseManager.getAllDepartmentNames();
 	    	  } catch (SQLException sqlException) {
@@ -5089,7 +5089,7 @@ public class CS136Final extends Application
 
 	    		    if (selectedDepartment != null) {
 	    		        
-	    		        ArrayList<String> filteredNames = null;
+	    		    	LinkedList<String> filteredNames = null;
 	    		    	  try {
 	    		    		  filteredNames = databaseManager.getInstructorNamesByDepartment(selectedDepartment);//get the filtered instructor names by department in my generic list
 	    		    	  } catch (SQLException sqlException) {
@@ -5146,7 +5146,7 @@ public class CS136Final extends Application
 	    	  
 	    	  instructorNameChoiceBox = new ChoiceBox();
 	    	  
-	    	  ArrayList<String> instructorNames = null;
+	    	  LinkedList<String> instructorNames = null;
 	    	  try {
 	    		  instructorNames = databaseManager.getAllInstructorNames();
 	    	  } catch (SQLException sqlException) {
@@ -6357,7 +6357,7 @@ public class CS136Final extends Application
 	    	    			  //get the student with the id to see if it exists, if it doesn't exist, show an error message
 	    	    			  Student studentToDisplay = databaseManager.getStudent(studentId);
 	    	    			  // get list of enrollments with the specified student id
-	    	    			  ArrayList<Enrollment> enrollmentDetailsList = databaseManager.getListOfEnrollmentsWithStudentId(studentId);
+	    	    			  LinkedList<Enrollment> enrollmentDetailsList = databaseManager.getListOfEnrollmentsWithStudentId(studentId);
 	    	    			  
 	    	    	    	  
 	    	    	    	  if (studentToDisplay == null) {
@@ -6603,7 +6603,7 @@ public class CS136Final extends Application
 	    	    			  Student studentToDisplay = databaseManager.getStudent(studentId);
 	    	    			  Course courseToDisplay = databaseManager.getCourse(courseId);
 	    	    			  Enrollment enrollmentToDrop = databaseManager.getEnrollment(studentId, courseId, year, semesterString);
-	    	    			  ArrayList<Enrollment> enrollmentDetailsList = databaseManager.getListOfEnrollmentsWithStudentId(studentId);
+	    	    			  LinkedList<Enrollment> enrollmentDetailsList = databaseManager.getListOfEnrollmentsWithStudentId(studentId);
 	    	    			  
 	    	    	    	  
 	    	    	    	  if (studentToDisplay == null) {
@@ -6996,7 +6996,7 @@ public class CS136Final extends Application
 	    	    			  studentId = Integer.parseInt(studentIdString);
 	    	    	    	  
 	    	    			  Student studentToDisplay = databaseManager.getStudent(studentId);
-	    	    			  ArrayList<Enrollment> enrollmentDetailsList = databaseManager.getListOfEnrollmentsWithStudentId(studentId);
+	    	    			  LinkedList<Enrollment> enrollmentDetailsList = databaseManager.getListOfEnrollmentsWithStudentId(studentId);
 	    	    			  
 	    	    	    	  
 	    	    	    	  if (studentToDisplay == null) {
@@ -7251,7 +7251,7 @@ public class CS136Final extends Application
 	    	    			  Student studentToDisplay = databaseManager.getStudent(studentId);
 	    	    			  Course courseToDisplay = databaseManager.getCourse(courseId);
 	    	    			  Enrollment enrollmentToUpdate = databaseManager.getEnrollment(studentId, courseId, year, semesterString);
-	    	    			  ArrayList<Enrollment> enrollmentDetailsList = databaseManager.getListOfEnrollmentsWithStudentId(studentId);
+	    	    			  LinkedList<Enrollment> enrollmentDetailsList = databaseManager.getListOfEnrollmentsWithStudentId(studentId);
 	    	    			  
 	    	    	    	  
 	    	    	    	  if (studentToDisplay == null) {
@@ -7641,7 +7641,7 @@ public class CS136Final extends Application
 	    	    			  courseId = Integer.parseInt(courseIdString);
 	    	    	    	  
 	    	    			  Course courseToDisplay = databaseManager.getCourse(courseId);
-	    	    			  ArrayList<Enrollment> enrollmentDetailsList = databaseManager.getListOfEnrollmentsWithCourseId(courseId);
+	    	    			  LinkedList<Enrollment> enrollmentDetailsList = databaseManager.getListOfEnrollmentsWithCourseId(courseId);
 	    	    			  
 	    	    	    	  
 	    	    	    	  if (courseToDisplay == null) {
@@ -7898,7 +7898,7 @@ public class CS136Final extends Application
 	    	    			  Student studentToDisplay = databaseManager.getStudent(studentId);
 	    	    			  Course courseToDisplay = databaseManager.getCourse(courseId);
 	    	    			  Enrollment enrollmentToUpdate = databaseManager.getEnrollment(studentId, courseId, year, semesterString);
-	    	    			  ArrayList<Enrollment> enrollmentDetailsList = databaseManager.getListOfEnrollmentsWithCourseId(courseId);
+	    	    			  LinkedList<Enrollment> enrollmentDetailsList = databaseManager.getListOfEnrollmentsWithCourseId(courseId);
 	    	    			  
 	    	    	    	  
 	    	    	    	  if (studentToDisplay == null) {
@@ -8302,7 +8302,7 @@ public class CS136Final extends Application
 	    	    			  Course courseToDisplay = databaseManager.getCourse(courseId);
 	    	    			  //Enrollment enrollmentToUpdate = enrollmentFileManager.GetEnrollment(studentId, courseId, year, semesterString);
 	    	    			  //System.out.println("here2");
-	    	    			  ArrayList<Enrollment> enrollmentDetailsList = databaseManager.generateReport(courseId, semesterString, year);
+	    	    			  LinkedList<Enrollment> enrollmentDetailsList = databaseManager.generateReport(courseId, semesterString, year);
 	    	    			  
 	    	    			  
 	    	    	    	  
